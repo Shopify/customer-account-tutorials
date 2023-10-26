@@ -869,19 +869,19 @@
     tslib "^2.0.3"
     uuid "^9.0.0"
 
-"@shopify/ui-extensions-react@^2023.10.0":
-  version "2023.10.0"
-  resolved "https://registry.yarnpkg.com/@shopify/ui-extensions-react/-/ui-extensions-react-2023.10.0.tgz#f143846decaf4d6f613e2839e537349265e4e6be"
-  integrity sha512-/i+PyQ0r5XRQZ0buLzvscz5Pn6qGqriyn8deJiXyfZq9WcBuMqS2HwUea3jqAdncv2Ih2F3fstiJ8bhS84R3Kw==
+"@shopify/ui-extensions-react@0.0.0-unstable-20231024205236":
+  version "0.0.0-unstable-20231024205236"
+  resolved "https://registry.yarnpkg.com/@shopify/ui-extensions-react/-/ui-extensions-react-0.0.0-unstable-20231024205236.tgz#54ff4f05e8a2e33c56f74757d1ebb2936e1ff0c7"
+  integrity sha512-yPUcZadezu28jrKRUxHa5f0f+XVFGqeyzuVJU8Iw5+kOtmUTPPlOLF0JeX64Ot72zen2Hb/xsOpBPUit0cMO7w==
   dependencies:
     "@remote-ui/async-subscription" "^2.1.12"
     "@remote-ui/react" "^5.0.2"
     "@types/react" ">=18.0.0"
 
-"@shopify/ui-extensions@^2023.10.0":
-  version "2023.10.0"
-  resolved "https://registry.yarnpkg.com/@shopify/ui-extensions/-/ui-extensions-2023.10.0.tgz#4b277d9a6a0f9ad5fb6ad890bd7bac3c2d29994f"
-  integrity sha512-DG76b60VPcJdOEPsfGVYCi02U2AYEhgnnosfvUPVf22r/LPTJnzM/UlMy5cfXcerM8VjonctC7jGS1BYJLDUlQ==
+"@shopify/ui-extensions@0.0.0-unstable-20231024205236":
+  version "0.0.0-unstable-20231024205236"
+  resolved "https://registry.yarnpkg.com/@shopify/ui-extensions/-/ui-extensions-0.0.0-unstable-20231024205236.tgz#72b9f6b532e01adc63f73df84d207919e84ca64b"
+  integrity sha512-K1xhvUn28EjFtQGJ0og0URx4F5Tz+sB9z3i9R2wHQhP6B2KWF/HEK9gB6cm8CmwvEfFnP0soo5IXzd8QXF2Vhg==
   dependencies:
     "@remote-ui/async-subscription" "^2.1.12"
     "@remote-ui/core" "^2.2.3"
