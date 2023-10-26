@@ -17,6 +17,3 @@ api_version = "2023-10"
 
 [pos]
 embedded = false
-
-[build]
-dev_store_url = "development-store-1.shopify.tutorials-setup.oluwatimi-owoturo.us.spin.dev"
