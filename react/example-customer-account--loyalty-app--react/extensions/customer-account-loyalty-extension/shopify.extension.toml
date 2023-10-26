@@ -1,0 +1,18 @@
+api_version = "2023-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "customer-account-loyalty-react"
+handle = "customer-account-loyalty-react"
+
+[[extensions.targeting]]
+module = "./src/CustomerFulfillmentDetailsDelivery.tsx"
+target = "customer-account.order-status.fulfillment-details.render-after"
+
+[[extensions.targeting]]
+module = "./src/OrderStatusPageTitlePointsBlockExtension.tsx"
+target = "customer-account.order-status.block.render"
+
+[[extensions.targeting]]
+module = "./src/ProfileBlockExtension.tsx"
+target = "customer-account.profile.block.render"

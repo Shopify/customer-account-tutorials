@@ -22,9 +22,9 @@ function PromotionBanner( ) {
       <BlockStack inlineAlignment="center" >
       <TextBlock>
         You've earned $1,000 points from this order and is upgraded to Platinum tier
-        <InlineSpacer spacing="small400"/>
-        <Link onPress="">
-        View rewards
+        <InlineSpacer spacing="tight"/>
+        <Link onPress={() => {}}>
+          View rewards
         </Link>
       </TextBlock>
       </BlockStack>

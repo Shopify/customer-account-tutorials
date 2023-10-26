@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Card,
   BlockStack,
@@ -8,15 +7,15 @@ import {
   Heading,
   InlineLayout,
   Link,
+  Button,
 } from "@shopify/ui-extensions-react/customer-account";
-import { Button } from "@shopify/ui-extensions/checkout";
 
 export default reactExtension(
   "customer-account.profile.block.render",
-  ( ) => <ProfileDynamicExtension />
+  ( ) => <ProfileBlockExtension />
 );
 
-function ProfileDynamicExtension( ) {
+function ProfileBlockExtension( ) {
   const api = useApi<"customer-account.profile.block.render">()
   return (
     <Card padding>
