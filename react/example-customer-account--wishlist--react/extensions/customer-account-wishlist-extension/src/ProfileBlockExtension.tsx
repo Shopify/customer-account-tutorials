@@ -9,7 +9,7 @@ import { Banner, reactExtension, useTranslate, useApi, Button } from '@shopify/u
     const translate = useTranslate();
 
     return (
-      <Button to="/">
+      <Button to="extension:/">
         {translate('wishlist.seeWishlistButton')}
       </Button>
     );
