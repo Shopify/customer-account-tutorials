@@ -13,16 +13,16 @@ export default reactExtension(
 );
 
 function CustomerFulfillmentDetailsDelivery( ) {
-  const api = useApi<"customer-account.order-status.fulfillment-details.render-after">()
+  const {i18n} = useApi<"customer-account.order-status.fulfillment-details.render-after">()
   return (
     <Card padding>
       <BlockStack>
         <TextBlock>
-          Tell us how we did for a chance to win 1000 points
+          {i18n.translate("fulfillmentDelivery.content")}
         </TextBlock>
         <BlockStack maxInlineSize={150}>
           <Button appearance="monochrome" kind="secondary" >
-            Write a review
+          {i18n.translate("fulfillmentDelivery.writeAReview")}
           </Button>
         </BlockStack>
      </BlockStack>

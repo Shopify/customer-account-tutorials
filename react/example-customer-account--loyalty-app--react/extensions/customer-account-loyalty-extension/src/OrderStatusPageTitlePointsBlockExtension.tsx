@@ -16,16 +16,18 @@ export default reactExtension(
 );
 
 function PromotionBanner( ) {
-  const api = useApi<"customer-account.order-status.block.render">()
+  const {i18n} = useApi<"customer-account.order-status.block.render">()
   return (
     <Banner>
       <BlockStack inlineAlignment="center" >
       <TextBlock>
-        You've earned $1,000 points from this order and is upgraded to Platinum tier
-        <InlineSpacer spacing="tight"/>
-        <Link onPress={() => {}}>
-          View rewards
-        </Link>
+        {i18n.translate("points.content", {
+          viewRewards: (
+            <Link onPress={() => {}}>
+              {i18n.translate("points.viewRewards")}
+            </Link>
+          )
+        })}
       </TextBlock>
       </BlockStack>
     </Banner>

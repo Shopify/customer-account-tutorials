@@ -16,32 +16,32 @@ export default reactExtension(
 );
 
 function ProfileBlockExtension( ) {
-  const api = useApi<"customer-account.profile.block.render">()
+  const {i18n} = useApi<"customer-account.profile.block.render">()
   return (
     <Card padding>
       <BlockStack spacing="loose">
-        <Heading level={3}>Rewards</Heading>
+        <Heading level={3}>{i18n.translate("rewards.heading")}</Heading>
         <InlineLayout>
           <BlockStack>
-            <TextBlock appearance="subdued">Points</TextBlock>
+            <TextBlock appearance="subdued">{i18n.translate("rewards.points")}</TextBlock>
             <TextBlock emphasis="bold" size="large">43,000</TextBlock>
           </BlockStack>
           <BlockStack>
-            <TextBlock appearance="subdued">Store credit</TextBlock>
+            <TextBlock appearance="subdued">{i18n.translate("rewards.storeCredit")}</TextBlock>
             <TextBlock emphasis="bold" size="large">$450</TextBlock>
           </BlockStack>
           <BlockStack>
-            <TextBlock appearance="subdued">Referrals</TextBlock>
+            <TextBlock appearance="subdued">{i18n.translate("rewards.referrals")}</TextBlock>
             <TextBlock emphasis="bold" size="large">3</TextBlock>
           </BlockStack>
           <BlockStack>
-            <TextBlock appearance="subdued">Referrals bonus</TextBlock>
+            <TextBlock appearance="subdued">{i18n.translate("rewards.referralBonus")}</TextBlock>
             <TextBlock emphasis="bold" size="large">600</TextBlock>
           </BlockStack>
         </InlineLayout>
         <BlockStack maxInlineSize={140}>
           <Button appearance="monochrome" kind="secondary">
-            View rewards
+            {i18n.translate("points.viewRewards")}
           </Button>
         </BlockStack>
       </BlockStack>
