@@ -1,0 +1,25 @@
+{
+  "name": "wishlist-app-react",
+  "version": "1.0.0",
+  "description": "Customer account wishlist app example",
+  "main": "index.js",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate"
+  },
+  "author": "Shopify",
+  "license": "MIT",
+  "dependencies": {
+    "@shopify/app": "^3.50.0",
+    "@shopify/cli": "^3.50.0",
+    "@shopify/ui-extensions": "0.0.0-unstable-20231024205236",
+    "@shopify/ui-extensions-react": "0.0.0-unstable-20231024205236",
+    "react": "^18.2.0"
+  },
+  "resolutions": {
+    "@types/react": "17.0.30"
+  }
+}

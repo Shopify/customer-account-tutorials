@@ -1,0 +1,14 @@
+api_version = "2023-07"
+
+[[extensions]]
+type = "ui_extension"
+name = "customer-account-wishlist-react"
+handle = "wishlist-extension-react"
+
+[[extensions.targeting]]
+module = "./src/FullPageExtension.tsx"
+target = "customer-account.page.render"
+
+[[extensions.targeting]]
+module = "./src/ProfileBlockExtension.tsx"
+target = "customer-account.profile.block.render"
