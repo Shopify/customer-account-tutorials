@@ -13,7 +13,7 @@ scopes = ""
 redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
 
 [webhooks]
-api_version = "2023-10"
+api_version = "unstable"
 
 [pos]
 embedded = false
