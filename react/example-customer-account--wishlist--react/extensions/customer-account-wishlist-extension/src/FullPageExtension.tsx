@@ -2,15 +2,14 @@ import {
   Card,
   reactExtension,
   useApi,
-  View,
   Grid,
   GridItem,
   BlockStack,
-  Heading,
   TextBlock,
   Button,
   InlineLayout,
-  Image
+  Image,
+  Page
 } from "@shopify/ui-extensions-react/customer-account";
 
 export default reactExtension(
@@ -31,9 +30,7 @@ function FullPageExtension() {
   ]
 
   return (
-  <View>
-    <BlockStack>
-    <Heading>{i18n.translate("wishlist.heading")}</Heading>
+  <Page title={i18n.translate("wishlist.heading")}>
     <Grid columns={['fill', 'fill', 'fill']} rows="auto" spacing="loose">
       {wishList.map((item) => {
           return (
@@ -58,7 +55,6 @@ function FullPageExtension() {
         })
       }
     </Grid>
-    </BlockStack>
-  </View>
+  </Page>
   );
 }
