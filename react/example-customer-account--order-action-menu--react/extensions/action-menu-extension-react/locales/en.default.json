@@ -1,0 +1,8 @@
+{
+  "report": "Report a problem",
+  "menuAction": {
+    "title": "Report a problem",
+    "cancel": "Cancel",
+    "submit": "Report"
+  }
+}
