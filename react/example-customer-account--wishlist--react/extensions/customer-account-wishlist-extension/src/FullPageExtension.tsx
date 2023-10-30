@@ -9,7 +9,8 @@ import {
   Button,
   InlineLayout,
   Image,
-  Page
+  Page, 
+  ResourceItem,
 } from "@shopify/ui-extensions-react/customer-account";
 
 export default reactExtension(
@@ -36,23 +37,18 @@ function FullPageExtension() {
     <Grid columns={['fill', 'fill', 'fill']} rows="auto" spacing="loose">
       {wishList.map((item) => {
           return (
-            <GridItem key="item">
-              <Card padding>
+            <ResourceItem key="item">
                 <BlockStack spacing="base">
                 <Image source={item.image}></Image>
                 <TextBlock emphasis="bold">{item.title}</TextBlock>
                 <TextBlock appearance="subdued">{i18n.formatCurrency(item.price, {currency: 'USD'})}</TextBlock>
                 <InlineLayout spacing="base">
-                  <Button kind="primary">
-                    {i18n.translate("wishlist.addToCart")}
-                  </Button>
                   <Button kind="secondary">
                   {i18n.translate("wishlist.remove")}
                   </Button>
                 </InlineLayout>
                 </BlockStack>
-              </Card>
-            </GridItem>
+            </ResourceItem>
           )
         })
       }

@@ -39,11 +39,11 @@ function MenuActionExtension( ) {
     >
       <Select label=""
       options={[
-          {value:"1" , label: "Package item is damaged"},
-          {value:"2" , label: "Missing items"},
-          {value:"3" , label: "Wrong item was sent"},
-          {value:"4" , label: "Item arrived too late"},
-          {value:"5" , label: "Never received item"}
+          {value:"1" , label: translate("modalOptions.damaged_package")},
+          {value:"2" , label: translate("modalOptions.missing_items")},
+          {value:"3" , label: translate("modalOptions.wrong_items")},
+          {value:"4" , label: translate("modalOptions.late_arrival")},
+          {value:"5" , label: translate("modalOptions.never_arrived")}
           ]}
        />
 
