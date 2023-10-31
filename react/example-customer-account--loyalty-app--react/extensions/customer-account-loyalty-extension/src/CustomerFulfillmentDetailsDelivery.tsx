@@ -15,7 +15,6 @@ export default reactExtension(
 function CustomerFulfillmentDetailsDelivery( ) {
   const {i18n} = useApi<"customer-account.order-status.fulfillment-details.render-after">()
   return (
-    <Card padding>
       <BlockStack>
         <TextBlock>
           {i18n.translate("fulfillmentDelivery.content")}
@@ -26,6 +25,5 @@ function CustomerFulfillmentDetailsDelivery( ) {
           </Button>
         </BlockStack>
      </BlockStack>
-   </Card>
   );
 }
