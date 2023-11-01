@@ -1,0 +1,18 @@
+{
+  "welcome": "Welcome to the {{target}} target of your customer account UI extension!",
+  "fulfillmentDelivery": {
+    "content": "Tell us how we did for a chance to win 1000 points",
+    "writeAReview": "Write a review"
+  },
+  "points": {
+    "content": "You've earned $1,000 points from this order and is upgraded to Platinum tier {{viewRewards}}",
+    "viewRewards": "View rewards"
+  },
+  "rewards": {
+    "heading": "Rewards",
+    "points": "Points",
+    "storeCredit": "Store credit",
+    "referrals": "Referrals",
+    "referralBonus": "Referral bonus"
+  }
+}

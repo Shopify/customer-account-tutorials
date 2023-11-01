@@ -1,0 +1,16 @@
+{
+  "report": "Report a problem",
+  "menuAction": {
+    "title": "Report a problem",
+    "cancel": "Cancel",
+    "submit": "Report"
+  }, 
+  "modalLabel" : "Select a problem",
+  "modalOptions": {
+    "damaged_package": "Package item is damaged", 
+    "missing_items" : "Missing items", 
+    "wrong_items" : "Wrong item was sent", 
+    "late_arrival": "Item arrived too late", 
+    "never_arrived" : "Never received item"
+  }
+}

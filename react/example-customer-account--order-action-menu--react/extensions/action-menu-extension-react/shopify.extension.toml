@@ -1,0 +1,14 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "action-menu-extension-react"
+handle = "action-menu-extension-react"
+
+[[extensions.targeting]]
+module = "./src/MenuActionExtension.tsx"
+target = "customer-account.order.action.menu-item.render"
+
+[[extensions.targeting]]
+module = "./src/MenuActionItemExtension.tsx"
+target = "customer-account.order.action.render"
