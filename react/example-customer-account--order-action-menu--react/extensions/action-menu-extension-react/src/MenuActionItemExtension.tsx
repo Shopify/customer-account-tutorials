@@ -37,7 +37,7 @@ function MenuActionExtension( ) {
         </Button>
       }
     >
-      <Select label=""
+      <Select label="Select a problem"
       options={[
           {value:"1" , label: translate("modalOptions.damaged_package")},
           {value:"2" , label: translate("modalOptions.missing_items")},
