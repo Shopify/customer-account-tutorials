@@ -4,7 +4,7 @@ This repo contains example apps that use Customer account UI extensions to exten
 
 ## Running this app
 
-To run the apps, clone the repository, and then follow our tutorials to install the project dependencies and preview the app.
+To run the apps locally, clone the repository, and then follow our tutorials to install the project dependencies and preview the app.
 
 ## Contributing
 
