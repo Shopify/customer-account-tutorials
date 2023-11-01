@@ -5,6 +5,7 @@ import {
   useApi,
   Select
 } from "@shopify/ui-extensions-react/customer-account";
+import { useState } from "react";
 
 export default reactExtension(
   "customer-account.order.action.render",
@@ -14,6 +15,7 @@ export default reactExtension(
 function MenuActionExtension( ) {
   const api = useApi<"customer-account.order.action.render">()
   const translate = api.i18n.translate;
+  const [currentProblem, setCurrentProblem] = useState("1");
 
   return (
     <CustomerAccountAction
@@ -37,7 +39,7 @@ function MenuActionExtension( ) {
         </Button>
       }
     >
-      <Select label="Select a problem"
+      <Select label={translate("modalLabel")}
       options={[
           {value:"1" , label: translate("modalOptions.damaged_package")},
           {value:"2" , label: translate("modalOptions.missing_items")},
@@ -45,6 +47,8 @@ function MenuActionExtension( ) {
           {value:"4" , label: translate("modalOptions.late_arrival")},
           {value:"5" , label: translate("modalOptions.never_arrived")}
           ]}
+        value={currentProblem}
+        onChange={(value) => setCurrentProblem(value)}
        />
 
     </CustomerAccountAction>
