@@ -1,0 +1,10 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "ca-loyalty-fulfillment-details"
+handle = "ca-loyalty-fulfillment-details"
+
+[[extensions.targeting]]
+module = "./src/CustomerFulfillmentDetailsDelivery.ts"
+target = "customer-account.order-status.fulfillment-details.render-after"

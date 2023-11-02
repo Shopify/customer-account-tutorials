@@ -1,0 +1,10 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "ca-loyalty-js-profile-block"
+handle = "ca-loyalty-js-profile-block"
+
+[[extensions.targeting]]
+module = "./src/ProfileBlockExtension.ts"
+target = "customer-account.profile.block.render"
