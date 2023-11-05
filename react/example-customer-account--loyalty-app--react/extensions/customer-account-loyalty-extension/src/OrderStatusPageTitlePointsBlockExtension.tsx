@@ -1,35 +1,29 @@
-import React from "react";
 import {
-  Card,
   BlockStack,
   reactExtension,
-  useApi,
   TextBlock,
-  InlineSpacer,
   Link,
   Banner
 } from "@shopify/ui-extensions-react/customer-account";
 
 export default reactExtension(
   "customer-account.order-status.block.render",
-  ( ) => <PromotionBanner />
+  () => <PromotionBanner />
 );
 
-function PromotionBanner( ) {
-  const {i18n} = useApi<"customer-account.order-status.block.render">()
+// [START order-status-block.build-ui]
+function PromotionBanner() {
   return (
     <Banner>
       <BlockStack inlineAlignment="center" >
       <TextBlock>
-        {i18n.translate("points.content", {
-          viewRewards: (
-            <Link onPress={() => {}}>
-              {i18n.translate("points.viewRewards")}
-            </Link>
-          )
-        })}
+      {`🎉 You've earned 1,000 points from this order. You've been upgraded to Platinum tier. `}
+      <Link>
+        View rewards
+      </Link>
       </TextBlock>
       </BlockStack>
     </Banner>
   );
 }
+// [END order-status-block.build-ui]
