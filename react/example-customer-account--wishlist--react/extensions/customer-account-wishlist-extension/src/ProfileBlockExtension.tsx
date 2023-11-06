@@ -1,16 +1,16 @@
-import { Banner, reactExtension, useTranslate, useApi, Button } from '@shopify/ui-extensions-react/customer-account';
+import { reactExtension, Button } from '@shopify/ui-extensions-react/customer-account';
 
-  export default reactExtension(
-    'customer-account.profile.block.render',
-     () => <BlockExtension />
+// [START block.build-ui]
+export default reactExtension(
+  'customer-account.profile.block.render',
+    () => <BlockExtension />
+);
+
+function BlockExtension() {
+  return (
+    <Button to="extension:/">
+      See wishlist
+    </Button>
   );
-
-  function BlockExtension() {
-    const translate = useTranslate();
-
-    return (
-      <Button to="extension:/">
-        {translate('wishlist.seeWishlistButton')}
-      </Button>
-    );
-  }
+}
+// [END block.build-ui]
