@@ -5,6 +5,7 @@ type = "ui_extension"
 name = "customer-account-wishlist-react"
 handle = "wishlist-extension-react"
 
+# [START config.setup-targets]
 [[extensions.targeting]]
 module = "./src/FullPageExtension.tsx"
 target = "customer-account.page.render"
@@ -12,3 +13,9 @@ target = "customer-account.page.render"
 [[extensions.targeting]]
 module = "./src/ProfileBlockExtension.tsx"
 target = "customer-account.profile.block.render"
+# [END config.setup-targets]
+
+# [START config.api-access]
+[extensions.capabilities]
+api_access = true
+# [END config.api-access]
