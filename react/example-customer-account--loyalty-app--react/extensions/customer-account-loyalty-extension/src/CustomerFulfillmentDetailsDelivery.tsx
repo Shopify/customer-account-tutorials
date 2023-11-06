@@ -1,31 +1,30 @@
 import {
-Card,
 BlockStack,
 reactExtension,
 Button,
-useApi,
 TextBlock,
 Divider,
 } from "@shopify/ui-extensions-react/customer-account";
 
 export default reactExtension(
 "customer-account.order-status.fulfillment-details.render-after",
-( ) => <CustomerFulfillmentDetailsDelivery />
+() => <CustomerFulfillmentDetailsDelivery />
 );
 
-function CustomerFulfillmentDetailsDelivery( ) {
-  const {i18n} = useApi<"customer-account.order-status.fulfillment-details.render-after">()
+// [START order-status-static.build-ui]
+function CustomerFulfillmentDetailsDelivery() {
   return (
       <BlockStack>
         <Divider/>
         <TextBlock>
-          {i18n.translate("fulfillmentDelivery.content")}
+        Tell us how we did for a chance to win 1000 points
         </TextBlock>
         <BlockStack maxInlineSize={150}>
           <Button appearance="monochrome" kind="secondary" >
-          {i18n.translate("fulfillmentDelivery.writeAReview")}
+          Write a review
           </Button>
         </BlockStack>
      </BlockStack>
   );
 }
+// [END order-status-static.build-ui]
