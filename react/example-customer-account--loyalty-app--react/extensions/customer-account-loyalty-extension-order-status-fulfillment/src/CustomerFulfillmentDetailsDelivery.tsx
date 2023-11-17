@@ -1,9 +1,9 @@
 import {
-BlockStack,
-reactExtension,
-Button,
-TextBlock,
-Divider,
+  BlockStack,
+  reactExtension,
+  Button,
+  TextBlock,
+  Divider,
 } from "@shopify/ui-extensions-react/customer-account";
 
 export default reactExtension(

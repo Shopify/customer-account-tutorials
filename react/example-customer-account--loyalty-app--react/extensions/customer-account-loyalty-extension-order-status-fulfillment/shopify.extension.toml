@@ -5,9 +5,13 @@ type = "ui_extension"
 name = "customer-account-loyalty-extension-fulfillment"
 handle = "ca-loyalty-extension-fulfillment"
 
+# [START config.setup-targets]
+
 [[extensions.targeting]]
 module = "./src/CustomerFulfillmentDetailsDelivery.tsx"
 target = "customer-account.order-status.fulfillment-details.render-after"
+
+# [END config.setup-targets]
 
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
