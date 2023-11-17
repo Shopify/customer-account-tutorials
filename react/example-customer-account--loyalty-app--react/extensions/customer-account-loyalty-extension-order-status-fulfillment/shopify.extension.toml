@@ -1,0 +1,20 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "customer-account-loyalty-extension-fulfillment"
+handle = "ca-loyalty-extension-fulfillment"
+
+[[extensions.targeting]]
+module = "./src/CustomerFulfillmentDetailsDelivery.tsx"
+target = "customer-account.order-status.fulfillment-details.render-after"
+
+[extensions.capabilities]
+# Gives your extension access to directly query Shopify’s storefront API.
+# https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/configuration#api-access
+api_access = true
+
+# Gives your extension access to make external network calls, using the
+# JavaScript `fetch()` API. Learn more:
+# https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/configuration#network-access
+# network_access = true
