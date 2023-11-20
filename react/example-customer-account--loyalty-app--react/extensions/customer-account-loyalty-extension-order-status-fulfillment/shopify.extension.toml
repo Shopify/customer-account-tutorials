@@ -3,7 +3,7 @@ api_version = "unstable"
 [[extensions]]
 type = "ui_extension"
 name = "customer-account-loyalty-extension-fulfillment"
-handle = "ca-loyalty-extension-fulfillment"
+handle = "ca-extension-fulfillment"
 
 # [START config.setup-targets]
 
