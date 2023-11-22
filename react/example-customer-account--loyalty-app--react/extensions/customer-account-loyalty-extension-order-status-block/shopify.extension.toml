@@ -17,7 +17,7 @@ handle = "ca-extension-os-block"
 # [START config.setup-targets]
 
 [[extensions.targeting]]
-module = "./src/OrderStatusPageTitlePointsBlockExtension.tsx"
+module = "./src/PointsBlockExtension.tsx"
 target = "customer-account.order-status.block.render"
 
 # [END config.setup-targets]
