@@ -8,7 +8,7 @@ handle = "ca-extension-fulfillment"
 # [START config.setup-targets]
 
 [[extensions.targeting]]
-module = "./src/FulfillmentDetailsDelivery.tsx"
+module = "./src/FulfillmentDelivery.tsx"
 target = "customer-account.order-status.fulfillment-details.render-after"
 
 # [END config.setup-targets]
