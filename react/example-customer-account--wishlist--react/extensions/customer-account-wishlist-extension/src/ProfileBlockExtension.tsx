@@ -1,4 +1,4 @@
-import { reactExtension, Button } from '@shopify/ui-extensions-react/customer-account';
+import { reactExtension, Link, Card, InlineStack, Text } from '@shopify/ui-extensions-react/customer-account';
 
 // [START block.build-ui]
 export default reactExtension(
@@ -8,9 +8,12 @@ export default reactExtension(
 
 function BlockExtension() {
   return (
-    <Button to="extension:/">
-      See wishlist
-    </Button>
+    <Card padding>
+      <InlineStack inlineAlignment="center" spacing="tight">
+        <Text>Grow your garden with more plants from your wishlist.</Text>
+        <Link to="extension:/">View wishlist</Link>
+      </InlineStack>
+    </Card>
   );
 }
 // [END block.build-ui]
