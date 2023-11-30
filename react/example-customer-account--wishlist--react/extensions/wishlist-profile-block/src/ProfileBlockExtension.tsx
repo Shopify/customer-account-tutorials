@@ -11,7 +11,7 @@ function BlockExtension() {
     <Card padding>
       <InlineStack inlineAlignment="center" spacing="tight">
         <Text>Grow your garden with more plants from your wishlist.</Text>
-        <Link to="extension:/">View wishlist</Link>
+        <Link to="extension:wishlist-extension-react/">View wishlist</Link>
       </InlineStack>
     </Card>
   );
