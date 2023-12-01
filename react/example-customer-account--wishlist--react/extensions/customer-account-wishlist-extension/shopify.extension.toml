@@ -9,10 +9,6 @@ handle = "wishlist-extension-react"
 [[extensions.targeting]]
 module = "./src/FullPageExtension.tsx"
 target = "customer-account.page.render"
-
-[[extensions.targeting]]
-module = "./src/ProfileBlockExtension.tsx"
-target = "customer-account.profile.block.render"
 # [END config.setup-targets]
 
 # [START config.api-access]

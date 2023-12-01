@@ -8,7 +8,8 @@
     "build": "shopify app build",
     "dev": "shopify app dev",
     "info": "shopify app info",
-    "generate": "shopify app generate"
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy"
   },
   "author": "Shopify",
   "license": "MIT",
