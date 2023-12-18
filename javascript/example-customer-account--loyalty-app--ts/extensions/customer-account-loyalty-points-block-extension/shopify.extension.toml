@@ -1,0 +1,10 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "ca-loyalty-js-points-block"
+handle = "ca-loyalty-js-points-block"
+
+[[extensions.targeting]]
+module = "./src/OrderStatusPageTitlePointsBlockExtension.ts"
+target = "customer-account.order-status.block.render"

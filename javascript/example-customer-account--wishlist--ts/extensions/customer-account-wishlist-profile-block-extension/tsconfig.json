@@ -1,0 +1,7 @@
+{
+  // This tsconfig.json file is only needed to inform the IDE
+  // Changing options here won't affect the build of your extension
+  "compilerOptions": {
+  },
+  "include": ["./src"]
+}

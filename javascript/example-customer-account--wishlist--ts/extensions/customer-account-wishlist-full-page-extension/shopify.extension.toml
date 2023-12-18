@@ -1,0 +1,13 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "ca-wishlist-js-full-page"
+handle = "ca-wishlist-js-full-page"
+
+[[extensions.targeting]]
+module = "./src/FullPageExtension.ts"
+target = "customer-account.page.render"
+
+[extensions.capabilities]
+api_access = true
