@@ -59,7 +59,7 @@ export default extension(
       }
     }
     // [END full-page.fetch-wishlist]
-
+    // [START full-page.build-ui]
     let wishlists = (await fetchProducts()).data?.products?.nodes || []; 
 
     if(wishlists.length > 0){
@@ -177,3 +177,4 @@ export default extension(
     }
   },
 );
+  // [END full-page.build-ui]

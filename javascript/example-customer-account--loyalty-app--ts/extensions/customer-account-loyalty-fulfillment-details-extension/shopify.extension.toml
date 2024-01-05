@@ -14,11 +14,13 @@ api_version = "unstable"
 type = "ui_extension"
 name = "ca-loyalty-fulfillment-details"
 handle = "ca-loyalty-fulfillment-details"
+
 # [START config.setup-targets]
 [[extensions.targeting]]
 module = "./src/CustomerFulfillmentDetailsDelivery.ts"
 target = "customer-account.order-status.fulfillment-details.render-after"
 # [END config.setup-targets]
+
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
 # https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/configuration#api-access
