@@ -5,6 +5,10 @@ type = "ui_extension"
 name = "ca-loyalty-js-points-block"
 handle = "ca-loyalty-js-points-block"
 
+# [START config.setup-targets]
+
 [[extensions.targeting]]
 module = "./src/OrderStatusPageTitlePointsBlockExtension.ts"
 target = "customer-account.order-status.block.render"
+
+# [END config.setup-targets]

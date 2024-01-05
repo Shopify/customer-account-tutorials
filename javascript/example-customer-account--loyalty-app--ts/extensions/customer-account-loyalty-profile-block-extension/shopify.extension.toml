@@ -5,6 +5,10 @@ type = "ui_extension"
 name = "ca-loyalty-js-profile-block"
 handle = "ca-loyalty-js-profile-block"
 
+# [START config.setup-targets]
+
 [[extensions.targeting]]
 module = "./src/ProfileBlockExtension.ts"
 target = "customer-account.profile.block.render"
+
+# [END config.setup-targets]

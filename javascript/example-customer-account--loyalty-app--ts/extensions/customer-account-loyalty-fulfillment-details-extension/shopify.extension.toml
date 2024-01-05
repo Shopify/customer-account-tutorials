@@ -5,6 +5,10 @@ type = "ui_extension"
 name = "ca-loyalty-fulfillment-details"
 handle = "ca-loyalty-fulfillment-details"
 
+# [START config.setup-targets]
+
 [[extensions.targeting]]
 module = "./src/CustomerFulfillmentDetailsDelivery.ts"
 target = "customer-account.order-status.fulfillment-details.render-after"
+
+# [END config.setup-targets]
