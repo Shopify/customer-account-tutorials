@@ -1,3 +1,9 @@
+# Learn more about configuring your Customer account UI extension:
+# https://shopify.dev/api/customer-account-ui-extensions/unstable/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+
 api_version = "unstable"
 
 [[extensions]]
@@ -5,6 +11,20 @@ type = "ui_extension"
 name = "ca-loyalty-js-points-block"
 handle = "ca-loyalty-js-points-block"
 
+# Controls where in Shopify your extension will be injected,
+# and the file that contains your extension’s source code. Learn more:
+# https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/extension-targets-overview
+# [START config.setup-targets]
 [[extensions.targeting]]
 module = "./src/OrderStatusPageTitlePointsBlockExtension.ts"
 target = "customer-account.order-status.block.render"
+# [END config.setup-targets]
+[extensions.capabilities]
+# Gives your extension access to directly query Shopify’s storefront API.
+# https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/configuration#api-access
+api_access = true
+
+# Gives your extension access to make external network calls, using the
+# JavaScript `fetch()` API. Learn more:
+# https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/configuration#network-access
+# network_access = true

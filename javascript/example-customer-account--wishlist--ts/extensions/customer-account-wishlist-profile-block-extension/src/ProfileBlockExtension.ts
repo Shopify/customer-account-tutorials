@@ -1,7 +1,6 @@
-
 import { extension, Link, InlineStack, Card, Text } from '@shopify/ui-extensions/customer-account';
 
-// [START profile.block.build-ui]
+// [START block.build-ui]
 export default extension('customer-account.profile.block.render', (root, api) => {
   const { i18n, extension } = api;
 
@@ -41,4 +40,4 @@ export default extension('customer-account.profile.block.render', (root, api) =>
   app.append(inlineComponent); 
   root.appendChild(app);
 });
-// [END profile.block.build-ui]
+// [END block.build-ui]
