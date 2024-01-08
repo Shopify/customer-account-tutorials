@@ -22,8 +22,10 @@ export default extension(
 
     const {close, authenticatedAccount} = api;   
     
+    // [START menu-action-modal.b2b-check]
     const isB2BCustomer = authenticatedAccount.purchasingCompany.current != null;
-    
+    // [END menu-action-modal.b2b-check]
+
     let currentProblem = "1";
     
     function setCurrentProblem(value){
@@ -36,6 +38,7 @@ export default extension(
       currentProblem = value; 
     }
 
+    // [START menu-action-modal.build-ui]
     const buttonClose = root.createComponent(
       Button, 
       {
@@ -80,6 +83,7 @@ export default extension(
     ); 
 
     root.append(app);
+    // [END menu-action-modal.build-ui]
   },
 );
 

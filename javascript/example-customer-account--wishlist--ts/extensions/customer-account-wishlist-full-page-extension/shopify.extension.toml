@@ -14,11 +14,13 @@ handle = "ca-wishlist-js-full-page"
 # Controls where in Shopify your extension will be injected,
 # and the file that contains your extension’s source code. Learn more:
 # https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/extension-targets-overview
+
 # [START config.setup-targets]
 [[extensions.targeting]]
 module = "./src/FullPageExtension.ts"
 target = "customer-account.page.render"
 # [END config.setup-targets]
+
 [extensions.capabilities]
 # Gives your extension access to directly query Shopify’s storefront API.
 # https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/configuration#api-access

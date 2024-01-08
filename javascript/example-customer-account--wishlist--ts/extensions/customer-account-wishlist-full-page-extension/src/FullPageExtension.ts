@@ -59,6 +59,7 @@ export default extension(
       }
     }
     // [END full-page.fetch-wishlist]
+
     // [START full-page.build-ui]
     let wishlists = (await fetchProducts()).data?.products?.nodes || []; 
 
@@ -176,5 +177,5 @@ export default extension(
       root.append(app);
     }
   },
+   // [END full-page.build-ui]
 );
-  // [END full-page.build-ui]
