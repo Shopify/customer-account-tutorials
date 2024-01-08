@@ -16,9 +16,11 @@ export default extension(
       {value:"5" , label: "Never received item"}
     ]
     
+    // [START menu-action-modal.b2b-check]
     const b2bOptions = dtcOptions.concat([
       {value:"6" , label: "Package sent to the wrong company location"},
       ]);
+    // [END menu-action-modal.b2b-check]
 
     const {close, authenticatedAccount} = api;   
     
