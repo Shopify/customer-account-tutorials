@@ -1,10 +1,13 @@
-
+# [START config.setup-collection-details]
 [[extensions]]
 name = "t:collection_one_name"
 type = "editor_extension_collection"
 handle = "editor-extension-collection"
 # Add the handles of the extensions you want in this collection here
+# [END config.setup-collection-details]
+# [START config.setup-includes]
 includes=["wishlist-extension-react", "wishlist-profile-block"]
+# [END config.setup-includes]
 # You can also add extensions to the collection this way
 #[[extensions.include]]
 #handle=""
