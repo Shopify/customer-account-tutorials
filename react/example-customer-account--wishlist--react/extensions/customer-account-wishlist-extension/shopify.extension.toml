@@ -2,7 +2,7 @@ api_version = "unstable"
 
 [[extensions]]
 type = "ui_extension"
-name = "customer-account-wishlist-react"
+name = "My wishlist"
 handle = "wishlist-extension-react"
 
 # [START config.setup-targets]
