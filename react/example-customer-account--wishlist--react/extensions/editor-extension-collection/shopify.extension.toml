@@ -1,6 +1,6 @@
 # [START config.setup-collection-details]
 [[extensions]]
-name = "t:collection_one_name"
+name = "t:collection_name"
 type = "editor_extension_collection"
 handle = "editor-extension-collection"
 # [END config.setup-collection-details]
