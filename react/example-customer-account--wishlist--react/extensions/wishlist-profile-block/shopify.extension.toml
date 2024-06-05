@@ -7,7 +7,7 @@ api_version = "unstable"
 
 [[extensions]]
 type = "ui_extension"
-name = "wishlist-profile-block"
+name = "Upsell banner"
 handle = "wishlist-profile-block"
 
 # Controls where in Shopify your extension will be injected,

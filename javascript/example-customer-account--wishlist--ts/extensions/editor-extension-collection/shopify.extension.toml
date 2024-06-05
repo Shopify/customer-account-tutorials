@@ -1,0 +1,21 @@
+# [START config.setup-collection-details]
+[[extensions]]
+name = "t:collection_name"
+type = "editor_extension_collection"
+handle = "editor-extension-collection"
+# [END config.setup-collection-details]
+# Add the handles of the extensions you want in this collection here
+# [START config.setup-includes]
+includes=["ca-wishlist-js-profile-block", "ca-wishlist-js-full-page"]
+# [ENG config.setup-includes]
+
+# You can also add extensions to the collection this way
+#[[extensions.include]]
+#handle=""
+
+# A second editor extension collection added in the same extension toml config
+# [[extensions]]
+# name = "t:collection_two_name"
+# type = "editor_extension_collection"
+# handle = "editor-extension-collection"
+# includes=[]

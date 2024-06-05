@@ -14,8 +14,8 @@
   "author": "Shopify",
   "license": "MIT",
   "dependencies": {
-    "@shopify/app": "^3.50.0",
-    "@shopify/cli": "^3.50.0",
+    "@shopify/app": "^3.58.2",
+    "@shopify/cli": "^3.60.1",
     "@shopify/ui-extensions": "0.0.0-unstable-20231024205236",
     "@shopify/ui-extensions-react": "0.0.0-unstable-20231024205236",
     "react": "^18.2.0"
