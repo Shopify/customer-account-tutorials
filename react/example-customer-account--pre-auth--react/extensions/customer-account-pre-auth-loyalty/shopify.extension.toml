@@ -1,0 +1,17 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "customer-account-pre-auth-loyalty-react"
+handle = "pre-auth-loyalty-extension-react"
+
+# [START config.setup-targets]
+[[extensions.targeting]]
+module = "./src/BlockLoyaltyExtension.tsx"
+target = "customer-account.order-status.block.render"
+# [END config.setup-targets]
+
+# [START config.api-access]
+[extensions.capabilities]
+# api_access = true
+# [END config.api-access]
