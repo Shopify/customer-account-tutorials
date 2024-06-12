@@ -1,0 +1,17 @@
+# Learn more about configuring your Customer account UI extension:
+# https://shopify.dev/api/customer-account-ui-extensions/unstable/configuration
+
+# The version of APIs your extension will receive. Learn more:
+# https://shopify.dev/docs/api/usage/versioning
+api_version = "unstable"
+
+[[extensions]]
+name = "customer-preferences"
+handle = "customer-preferences"
+type = "ui_extension"
+
+# [START setup-targets.config]
+[[extensions.targeting]]
+module = "./src/ProfilePreferenceExtension.tsx"
+target = "customer-account.profile.block.render"
+# [END setup-targets.config]
