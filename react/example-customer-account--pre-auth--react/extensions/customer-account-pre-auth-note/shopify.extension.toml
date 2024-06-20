@@ -1,0 +1,21 @@
+api_version = "unstable"
+
+[[extensions]]
+type = "ui_extension"
+name = "customer-account-pre-auth-note-react"
+handle = "pre-auth-note-react"
+
+# [START config.setup-targets]
+[[extensions.targeting]]
+module = "./src/MenuActionItemButtonExtension.tsx"
+target = "customer-account.order.action.menu-item.render"
+
+[[extensions.targeting]]
+module = "./src/MenuActionModalExtension.tsx"
+target = "customer-account.order.action.render"
+# [END config.setup-targets]
+
+# [START config.api-access]
+[extensions.capabilities]
+# api_access = true
+# [END config.api-access]
