@@ -1,5 +1,4 @@
 // [START menu-action.setup-target]
-import React from "react";
 import {
   Button,
   reactExtension,

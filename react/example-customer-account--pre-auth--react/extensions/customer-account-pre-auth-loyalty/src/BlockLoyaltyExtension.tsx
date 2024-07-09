@@ -1,5 +1,4 @@
 // [START order-status-block.setup-target]
-import React from "react";
 import {
   Button,
   Card,
