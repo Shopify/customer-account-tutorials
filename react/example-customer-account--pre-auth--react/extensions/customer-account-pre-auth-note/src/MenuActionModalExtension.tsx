@@ -1,5 +1,5 @@
 // [START menu-action-modal.render-modal]
-import React, {useState} from "react";
+import {useState} from "react";
 import {
   Button,
   CustomerAccountAction,
@@ -24,7 +24,7 @@ function MenuActionModalExtension( ) {
     <CustomerAccountAction
       title={"Add a note to the order"}
     >
-      <Form onSubmit={async () => {
+      <Form onSubmit={() => {
 
         try {
           // [START menu-action-modal.make-request]
