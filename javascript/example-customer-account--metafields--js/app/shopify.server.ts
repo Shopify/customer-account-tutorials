@@ -27,8 +27,8 @@ const shopify = shopifyApp({
       callbackUrl: "/webhooks",
     },
   },
+  // [START create-metafield-definition.after-auth]
   hooks: {
-    // [START create-metafield-definition.after-auth]
     afterAuth: async ({ admin, session }) => {
       await shopify.registerWebhooks({ session });
 
@@ -48,8 +48,8 @@ const shopify = shopifyApp({
         throw error;
       }
     },
-    // [END create-metafield-definition.after-auth]
   },
+  // [END create-metafield-definition.after-auth]
   future: {
     unstable_newEmbeddedAuthStrategy: true,
   },
