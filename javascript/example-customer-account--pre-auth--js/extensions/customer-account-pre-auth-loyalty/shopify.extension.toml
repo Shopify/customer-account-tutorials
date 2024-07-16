@@ -2,12 +2,12 @@ api_version = "unstable"
 
 [[extensions]]
 type = "ui_extension"
-name = "customer-account-pre-auth-loyalty-react"
-handle = "pre-auth-loyalty-extension-react"
+name = "customer-account-pre-auth-loyalty-js"
+handle = "pre-auth-loyalty-extension-js"
 
 # [START config.setup-targets]
 [[extensions.targeting]]
-module = "./src/BlockLoyaltyExtension.tsx"
+module = "./src/BlockLoyaltyExtension.js"
 target = "customer-account.order-status.block.render"
 # [END config.setup-targets]
 

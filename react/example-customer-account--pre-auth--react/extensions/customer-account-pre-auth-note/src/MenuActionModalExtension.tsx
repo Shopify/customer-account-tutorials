@@ -31,10 +31,8 @@ function MenuActionModalExtension( ) {
           // make a request to the server to add a note
           // [END menu-action-modal.make-request]
         } catch(error) {
-          // toast api if possible
           console.log(error);
         } finally {
-          // api.storage.write("orderNote", note);
           api.close();
         }
 
