@@ -24,7 +24,7 @@ export default reactExtension(
         }`,
       };
       const result = await fetch(
-        "shopify://customer-account/api/latest/graphql.json",
+        "shopify://customer-account/api/unstable/graphql.json",
         {
           method: "POST",
           headers: {
