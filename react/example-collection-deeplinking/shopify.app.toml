@@ -3,7 +3,7 @@
 client_id = "7354ceacf8f0bb4b9ba112c83b5edf2f"
 name = "collection-deeplinking"
 handle = "collection-deeplinking"
-application_url = "https://formal-backup-political-journalists.trycloudflare.com"
+application_url = "https://extract-bored-cabin-guys.trycloudflare.com"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = ""
 
 [auth]
 redirect_urls = [
-  "https://formal-backup-political-journalists.trycloudflare.com/auth/callback",
-  "https://formal-backup-political-journalists.trycloudflare.com/auth/shopify/callback",
-  "https://formal-backup-political-journalists.trycloudflare.com/api/auth/callback"
+  "https://extract-bored-cabin-guys.trycloudflare.com/auth/callback",
+  "https://extract-bored-cabin-guys.trycloudflare.com/auth/shopify/callback",
+  "https://extract-bored-cabin-guys.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

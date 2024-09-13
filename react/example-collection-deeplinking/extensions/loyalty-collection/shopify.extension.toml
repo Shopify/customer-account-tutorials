@@ -1,0 +1,7 @@
+[[extensions]]
+name = "Loyalty collection"
+handle = "deep-linked-collection"
+type = "editor_extension_collection"
+
+# Add the handles of the extensions you want in this collection here
+includes=["wishlist-extension-react", "upsell-banner"]
