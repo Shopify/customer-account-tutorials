@@ -1,23 +1,5 @@
 
 import {BlockStack, ResourceItem, extension, Image, Page, Grid, GridItem, TextBlock, Button} from '@shopify/ui-extensions/customer-account';
-interface Product { 
-  id: string;
-  title: string;
-  onlineStoreUrl: string;
-  featuredImage: {
-    url: string;
-  }
-  priceRange: {
-    minVariantPrice: {
-      amount: number;
-      currencyCode: string;
-    };
-    maxVariantPrice: {
-      amount: number;
-      currencyCode: string;
-    };
-  };
-}
 
 export default extension(
   'customer-account.page.render',
@@ -26,7 +8,7 @@ export default extension(
     // [START full-page.fetch-wishlist]
     const fetchProducts = async () => {
       try {
-        const data = await api.query<{ products: { nodes: Product[] }}>(
+        const data = await api.query(
           `query ($first: Int!) {
             products(first: $first) {
               nodes {
@@ -58,11 +40,11 @@ export default extension(
         console.log(error)
       }
     }
+
+    let wishlists = (await fetchProducts()).data?.products?.nodes || []; 
     // [END full-page.fetch-wishlist]
 
     // [START full-page.build-ui]
-    let wishlists = (await fetchProducts()).data?.products?.nodes || []; 
-
     if(wishlists.length > 0){
       let app = root.createComponent(
         Grid,
@@ -74,7 +56,7 @@ export default extension(
         }
       );
 
-      const deleteWishlistItem = (id: string) => {
+      const deleteWishlistItem = (id) => {
         let filteredWishList = wishlists.filter((item => item.id !== id)); 
         wishlists = filteredWishList; 
       }
