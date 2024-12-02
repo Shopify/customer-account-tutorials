@@ -16,8 +16,8 @@
   "dependencies": {
     "@shopify/app": "^3.58.2",
     "@shopify/cli": "^3.60.1",
-    "@shopify/ui-extensions": "0.0.0-unstable-20231024205236",
-    "@shopify/ui-extensions-react": "0.0.0-unstable-20231024205236",
+    "@shopify/ui-extensions": "2024.10.x",
+    "@shopify/ui-extensions-react": "2024.10.x",
     "react": "^18.2.0"
   },
   "resolutions": {

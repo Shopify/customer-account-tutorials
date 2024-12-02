@@ -16,6 +16,6 @@ Your new extension contains the following files:
 ## Useful Links
 
 - [Customer account UI extension documentation](https://shopify.dev/docs/api/customer-account-ui-extensions)
-  - [Configuration](https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/configuration)
-  - [API Reference](https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/apis)
-  - [UI Components](https://shopify.dev/docs/api/customer-account-ui-extensions/unstable/components)
+  - [Configuration](https://shopify.dev/docs/api/customer-account-ui-extensions/2024-10/configuration)
+  - [API Reference](https://shopify.dev/docs/api/customer-account-ui-extensions/2024-10/apis)
+  - [UI Components](https://shopify.dev/docs/api/customer-account-ui-extensions/2024-10/components)
