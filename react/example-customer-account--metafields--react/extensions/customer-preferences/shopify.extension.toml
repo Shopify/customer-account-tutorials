@@ -1,9 +1,9 @@
 # Learn more about configuring your Customer account UI extension:
-# https://shopify.dev/api/customer-account-ui-extensions/unstable/configuration
+# https://shopify.dev/api/customer-account-ui-extensions/2024-10/configuration
 
 # The version of APIs your extension will receive. Learn more:
 # https://shopify.dev/docs/api/usage/versioning
-api_version = "unstable"
+api_version = "2024-10"
 
 [[extensions]]
 name = "customer-preferences"
