@@ -99,7 +99,7 @@ async function createMetafield(admin: AdminApiContext<ShopifyRestResources>) {
       definition: {
         access: {
           customerAccount: "READ_WRITE",
-          admin: "PRIVATE"
+          admin: "MERCHANT_READ"
         },
         key: "nickname",
         name: "The customer's preferred name",
