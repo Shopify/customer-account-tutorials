@@ -1,0 +1,14 @@
+api_version = "2025-10"
+
+[[extensions]]
+uid = "9a9cc029-b449-d82d-d072-f613da8fa52aa33c4be4"
+type = "ui_extension"
+name = "ca-loyalty-order-status-fulfillment"
+handle = "ca-loyalty-order-status-fulfillment"
+
+[[extensions.targeting]]
+module = "./src/FulfillmentDelivery.jsx"
+target = "customer-account.order-status.fulfillment-details.render-after"
+
+[extensions.capabilities]
+api_access = true
