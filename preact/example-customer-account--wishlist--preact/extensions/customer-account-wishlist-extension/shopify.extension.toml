@@ -1,0 +1,18 @@
+api_version = "2025-10"
+
+[[extensions]]
+uid = "3a495b4c-7432-f824-50b6-44ec8381c25e7d2a5779"
+type = "ui_extension"
+name = "My wishlist"
+handle = "wishlist-extension-preact"
+
+# [START config.setup-targets]
+[[extensions.targeting]]
+module = "./src/FullPageExtension.jsx"
+target = "customer-account.page.render"
+# [END config.setup-targets]
+
+# [START config.api-access]
+[extensions.capabilities]
+api_access = true
+# [END config.api-access]

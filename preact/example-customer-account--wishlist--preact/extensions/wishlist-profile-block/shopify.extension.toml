@@ -6,6 +6,7 @@
 api_version = "2025-10"
 
 [[extensions]]
+uid = "a1eb23c4-ce29-1e17-8061-132bf7a545b9d9bca54d"
 type = "ui_extension"
 name = "Upsell banner"
 handle = "wishlist-profile-block"
