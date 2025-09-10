@@ -1,0 +1,20 @@
+api_version = "2025-10"
+
+[[extensions]]
+uid = "1cf4f1a2-0def-235f-6508-aa91127c34065228f1d0"
+type = "ui_extension"
+name = "customer-account-pre-auth-note-preact"
+handle = "pre-auth-note-preact"
+
+# [START config.setup-targets]
+[[extensions.targeting]]
+module = "./src/MenuActionItemButtonExtension.jsx"
+target = "customer-account.order.action.menu-item.render"
+
+[[extensions.targeting]]
+module = "./src/MenuActionModalExtension.jsx"
+target = "customer-account.order.action.render"
+# [END config.setup-targets]
+
+[extensions.capabilities]
+# api_access = true
