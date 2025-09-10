@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import {useEffect, useState} from 'react';
 import {
   reactExtension,
   useApi,
@@ -7,25 +7,24 @@ import {
   TextBlock,
   Button,
   Image,
-  Page, 
+  Page,
   ResourceItem,
   SkeletonImage,
   SkeletonText,
-} from "@shopify/ui-extensions-react/customer-account";
+} from '@shopify/ui-extensions-react/customer-account';
 
 // [START full-page.setup-target]
-export default reactExtension(
-  "customer-account.page.render",
-  () => <FullPageExtension />
-);
+export default reactExtension('customer-account.page.render', () => (
+  <FullPageExtension />
+));
 // [END full-page.setup-target]
-interface Product { 
+interface Product {
   id: string;
   title: string;
   onlineStoreUrl: string;
   featuredImage: {
     url: string;
-  }
+  };
   priceRange: {
     minVariantPrice: {
       amount: number;
@@ -39,10 +38,13 @@ interface Product {
 }
 
 function FullPageExtension() {
-  const { i18n, query } = useApi<"customer-account.page.render">();
-  const [wishlist, setWishlist] = useState<Product[]>([])
-  const [loading, setLoading] = useState(false)
-  const [removeLoading, setRemoveLoading] = useState({id: null, loading: false})
+  const {i18n, query} = useApi<'customer-account.page.render'>();
+  const [wishlist, setWishlist] = useState<Product[]>([]);
+  const [loading, setLoading] = useState(false);
+  const [removeLoading, setRemoveLoading] = useState({
+    id: null,
+    loading: false,
+  });
 
   // [START full-page.fetch-wishlist]
   async function fetchWishlist() {
@@ -51,7 +53,7 @@ function FullPageExtension() {
     try {
       // Implement a server request to retrieve the wishlist for this customer
       // Then call the Storefront API to retrieve the details of the wishlisted products
-      const data = await query<{ products: { nodes: Product[] }}>(
+      const data = await query<{products: {nodes: Product[]}}>(
         `query ($first: Int!) {
           products(first: $first) {
             nodes {
@@ -76,13 +78,13 @@ function FullPageExtension() {
         }`,
         {
           variables: {first: 10},
-        },
+        }
       );
       setLoading(false);
-      setWishlist(data.data?.products?.nodes || [])
+      setWishlist(data.data?.products?.nodes || []);
     } catch (error) {
       setLoading(false);
-      console.log(error)
+      console.log(error);
     }
   }
   // [END full-page.fetch-wishlist]
@@ -93,70 +95,88 @@ function FullPageExtension() {
     setRemoveLoading({loading: true, id});
     return new Promise<void>((resolve) => {
       setTimeout(() => {
+        // Send a request to your server to delete the wishlist item
+        setWishlist(wishlist.filter((item) => item.id !== id));
 
-      // Send a request to your server to delete the wishlist item
-      setWishlist(wishlist.filter((item) => item.id !== id))
-
-      setRemoveLoading({loading: false, id: null});
-      resolve();
-    }, 750)});
+        setRemoveLoading({loading: false, id: null});
+        resolve();
+      }, 750);
+    });
   }
   // [END full-page.delete-item]
 
   // [START full-page.fetch-wishlist]
   useEffect(() => {
     fetchWishlist();
-  }, [])
+  }, []);
   // [END full-page.fetch-wishlist]
 
   // [START full-page.build-ui]
   return (
-  <Page title="Wishlist">
-    <Grid columns={['fill', 'fill', 'fill']} rows="auto" spacing="loose">
-      {loading && <ResourceItem loading>
-        <BlockStack spacing="base">
-          <SkeletonImage inlineSize="fill" aspectRatio={1} blockSize="fill" />
-          <BlockStack spacing="none">
-            <SkeletonText inlineSize="base" />
-          </BlockStack>
-          <SkeletonText inlineSize="small" />
-        </BlockStack>
-      </ResourceItem>}
-      {!loading && wishlist.length > 0 && wishlist.map((product) => {
-          return (
-            <ResourceItem loading={loading} key={product.id} action={
-              <>
-                <Button
-                  kind='primary'
-                  to={product.onlineStoreUrl}
-                >
-                  View product
-                </Button>
-                <Button
-                  kind='secondary'
-                  loading={removeLoading.loading && product.id === removeLoading.id}
-                  onPress={() => {
-                    deleteWishlistItem(product.id)
-                  }}
-                >
-                  Remove
-                </Button>
-              </>
-            }>
-              <BlockStack spacing="base">
-              <Image source={product.featuredImage.url}></Image>
-              <TextBlock emphasis="bold">{product.title}</TextBlock>
-              <TextBlock appearance="subdued">
-              {i18n.formatCurrency(product.priceRange.minVariantPrice.amount, {currency: product.priceRange.minVariantPrice.currencyCode})}
-              </TextBlock>
+    <Page title="Wishlist">
+      <Grid columns={['fill', 'fill', 'fill']} rows="auto" spacing="loose">
+        {loading && (
+          <ResourceItem loading>
+            <BlockStack spacing="base">
+              <SkeletonImage
+                inlineSize="fill"
+                aspectRatio={1}
+                blockSize="fill"
+              />
+              <BlockStack spacing="none">
+                <SkeletonText inlineSize="base" />
               </BlockStack>
-            </ResourceItem>
-          )
-        })
-      }
-      {!loading && wishlist.length === 0 && <TextBlock>No items in your wishlist.</TextBlock>}
+              <SkeletonText inlineSize="small" />
+            </BlockStack>
+          </ResourceItem>
+        )}
+        {!loading &&
+          wishlist.length > 0 &&
+          wishlist.map((product) => {
+            return (
+              <ResourceItem
+                loading={loading}
+                key={product.id}
+                action={
+                  <>
+                    <Button kind="primary" to={product.onlineStoreUrl}>
+                      View product
+                    </Button>
+                    <Button
+                      kind="secondary"
+                      loading={
+                        removeLoading.loading && product.id === removeLoading.id
+                      }
+                      onPress={() => {
+                        deleteWishlistItem(product.id);
+                      }}
+                    >
+                      Remove
+                    </Button>
+                  </>
+                }
+              >
+                <BlockStack spacing="base">
+                  <Image source={product.featuredImage.url}></Image>
+                  <TextBlock emphasis="bold">{product.title}</TextBlock>
+                  <TextBlock appearance="subdued">
+                    {i18n.formatCurrency(
+                      product.priceRange.minVariantPrice.amount,
+                      {
+                        currency:
+                          product.priceRange.minVariantPrice.currencyCode,
+                      }
+                    )}
+                  </TextBlock>
+                </BlockStack>
+              </ResourceItem>
+            );
+          })}
+        {!loading && wishlist.length === 0 && (
+          <TextBlock>No items in your wishlist.</TextBlock>
+        )}
       </Grid>
-  </Page>
+    </Page>
   );
   // [END full-page.build-ui]
 }
