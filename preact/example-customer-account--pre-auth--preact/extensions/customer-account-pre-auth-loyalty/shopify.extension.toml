@@ -1,0 +1,16 @@
+api_version = "2025-10"
+
+[[extensions]]
+uid = "c96aa931-ed42-24ea-b5cf-289deff901edbd465085"
+type = "ui_extension"
+name = "customer-account-pre-auth-loyalty-preact"
+handle = "pre-auth-loyalty-extension-preact"
+
+# [START config.setup-targets]
+[[extensions.targeting]]
+module = "./src/BlockLoyaltyExtension.jsx"
+target = "customer-account.order-status.block.render"
+# [END config.setup-targets]
+
+[extensions.capabilities]
+# api_access = true
