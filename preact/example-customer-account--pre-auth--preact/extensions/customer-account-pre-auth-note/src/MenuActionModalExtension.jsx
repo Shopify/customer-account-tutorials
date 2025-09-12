@@ -25,14 +25,12 @@ function MenuActionModalExtension() {
 
   return (
     <s-customer-account-action heading="Add a note to the order">
-      <s-stack direction="block">
-        <s-text-area
-          value={note}
-          onChange={(e) => setNote(e.target.value)}
-          rows={3}
-          label="Note for the order"
-        />
-      </s-stack>
+      <s-text-area
+        value={note}
+        onChange={(e) => setNote(e.target.value)}
+        rows={3}
+        label="Note for the order"
+      />
 
       <s-button slot="primary-action" type="submit" onClick={saveNote}>
         Add note

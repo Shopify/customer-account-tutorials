@@ -1,0 +1,17 @@
+api_version = "2025-10"
+
+[[extensions]]
+uid = "80e9f109-e0c9-ab13-2c5a-e065beb9d2eb669d1292"
+type = "ui_extension"
+name = "action-menu-extension-preact"
+handle = "action-menu-extension-preact"
+
+# [START config.setup-targets]
+[[extensions.targeting]]
+module = "./src/MenuActionExtension.jsx"
+target = "customer-account.order.action.menu-item.render"
+
+[[extensions.targeting]]
+module = "./src/MenuActionModalExtension.jsx"
+target = "customer-account.order.action.render"
+# [END config.setup-targets]
