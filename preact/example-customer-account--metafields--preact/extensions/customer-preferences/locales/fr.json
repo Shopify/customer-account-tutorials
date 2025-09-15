@@ -1,0 +1,12 @@
+{
+  "preferenceCard": {
+    "heading": "Préférences",
+    "nickName": {
+      "label": "Surnom"
+    },
+    "edit": "Modifier",
+    "modalHeading": "Modifier les préférences",
+    "save": "Sauvegarder",
+    "cancel": "Annuler"
+  }
+}
