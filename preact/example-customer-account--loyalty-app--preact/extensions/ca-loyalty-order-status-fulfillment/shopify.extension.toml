@@ -6,9 +6,11 @@ type = "ui_extension"
 name = "ca-loyalty-order-status-fulfillment"
 handle = "ca-loyalty-order-status-fulfillment"
 
+# [START config.setup-targets]
 [[extensions.targeting]]
 module = "./src/FulfillmentDelivery.jsx"
 target = "customer-account.order-status.fulfillment-details.render-after"
+# [END config.setup-targets]
 
 [extensions.capabilities]
 api_access = true
