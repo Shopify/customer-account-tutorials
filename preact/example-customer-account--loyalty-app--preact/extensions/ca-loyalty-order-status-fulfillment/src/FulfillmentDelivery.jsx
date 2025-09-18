@@ -12,7 +12,7 @@ function CustomerFulfillmentDetailsDelivery() {
       <s-divider />
       <s-text>Tell us how we did for a chance to win 1000 points</s-text>
       <s-stack direction="block" max-inline-size="150">
-        <s-link>Write a review</s-link>
+        <s-button>Write a review</s-button>
       </s-stack>
     </s-stack>
   );
