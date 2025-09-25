@@ -15,6 +15,3 @@ target = "customer-account.order.action.menu-item.render"
 module = "./src/MenuActionModalExtension.jsx"
 target = "customer-account.order.action.render"
 # [END config.setup-targets]
-
-[extensions.capabilities]
-# api_access = true
