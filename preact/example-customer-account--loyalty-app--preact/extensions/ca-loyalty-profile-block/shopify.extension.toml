@@ -1,8 +1,3 @@
-# Learn more about configuring your Customer account UI extension:
-# https://shopify.dev/api/customer-account-ui-extensions/2025-10/configuration
-
-# The version of APIs your extension will receive. Learn more:
-# https://shopify.dev/docs/api/usage/versioning
 api_version = "2025-10"
 
 [[extensions]]
@@ -10,24 +5,12 @@ type = "ui_extension"
 name = "ca-loyalty-profile-block"
 handle = "ca-loyalty-profile-block"
 
-# Controls where in Shopify your extension will be injected,
-# and the file that contains your extension's source code. Learn more:
-# https://shopify.dev/docs/api/customer-account-ui-extensions/2025-10/extension-targets-overview
 
 # [START config.setup-targets]
-
 [[extensions.targeting]]
 module = "./src/ProfileBlockExtension.jsx"
 target = "customer-account.profile.block.render"
-
 # [END config.setup-targets]
 
 [extensions.capabilities]
-# Gives your extension access to directly query Shopify's storefront API.
-# https://shopify.dev/docs/api/customer-account-ui-extensions/2025-10/configuration#api-access
 api_access = true
-
-# Gives your extension access to make external network calls, using the
-# JavaScript `fetch()` API. Learn more:
-# https://shopify.dev/docs/api/customer-account-ui-extensions/2025-10/configuration#network-access
-# network_access = true

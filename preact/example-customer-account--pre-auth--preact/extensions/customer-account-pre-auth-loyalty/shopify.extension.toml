@@ -11,6 +11,3 @@ handle = "pre-auth-loyalty-extension-preact"
 module = "./src/BlockLoyaltyExtension.jsx"
 target = "customer-account.order-status.block.render"
 # [END config.setup-targets]
-
-[extensions.capabilities]
-# api_access = true
