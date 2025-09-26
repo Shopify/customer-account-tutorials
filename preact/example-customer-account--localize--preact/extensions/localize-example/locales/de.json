@@ -1,0 +1,10 @@
+{
+    "attributeChangesAreNotSupported": "Attributänderungen werden in diesem Checkout nicht unterstützt",
+    "bannerHeading": "Ihre Prämien & Guthaben",
+    "balanceRemaining": "Ihr Guthaben beträgt {{formattedBalance}}",
+    "loyaltyPoints": {
+      "zero": "Sie haben keine Treuepunkte",
+      "one": "Sie haben {{formattedPoints}} Treuepunkt",
+      "other": "Sie haben {{formattedPoints}} Treuepunkte"
+    }
+  }

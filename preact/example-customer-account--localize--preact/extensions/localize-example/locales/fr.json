@@ -1,0 +1,10 @@
+{
+    "attributeChangesAreNotSupported": "Les modifications d'attribut ne sont pas prises en charge dans cette commande",
+    "bannerHeading": "Vos récompenses et solde",
+    "balanceRemaining": "Votre solde est de {{formattedBalance}}",
+    "loyaltyPoints": {
+      "zero": "Vous n'avez aucun point de fidélité",
+      "one": "Vous avez {{formattedPoints}} point de fidélité",
+      "other": "Vous avez {{formattedPoints}} points de fidélité"
+    }
+  }

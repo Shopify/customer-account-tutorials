@@ -1,0 +1,15 @@
+api_version = "2025-10"
+
+[[extensions]]
+name = "localize-example"
+handle = "localize-example"
+type = "ui_extension"
+
+# [START config.setup-targets]
+[[extensions.targeting]]
+module = "./src/LocalizeExtension.jsx"
+target = "customer-account.profile.block.render"
+# [END config.setup-targets]
+
+[extensions.capabilities]
+api_access = true
