@@ -1,0 +1,10 @@
+{
+    "attributeChangesAreNotSupported": "Attribute changes are not supported in this checkout",
+    "bannerHeading": "Your Rewards & Balance",
+    "balanceRemaining": "Your balance is {{formattedBalance}}",
+    "loyaltyPoints": {
+      "zero": "You have no loyalty points",
+      "one": "You have {{formattedPoints}} loyalty point",
+      "other": "You have {{formattedPoints}} loyalty points"
+    }
+  }

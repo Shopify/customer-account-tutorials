@@ -1,0 +1,10 @@
+{
+    "attributeChangesAreNotSupported": "Los cambios de atributos no están soportados en este checkout",
+    "bannerHeading": "Tus recompensas y saldo",
+    "balanceRemaining": "Tu saldo es {{formattedBalance}}",
+    "loyaltyPoints": {
+      "zero": "No tienes puntos de fidelidad",
+      "one": "Tienes {{formattedPoints}} punto de fidelidad",
+      "other": "Tienes {{formattedPoints}} puntos de fidelidad"
+    }
+  }
