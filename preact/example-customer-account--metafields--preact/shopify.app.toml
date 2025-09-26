@@ -9,16 +9,19 @@ include_config_on_deploy = true
 [webhooks]
 api_version = "2025-10"
 
+# [START config.setup-scopes]
 [access_scopes]
-# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_customers, customer_write_customers"
+# [END config.setup-scopes]
 
 [auth]
 redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
 
+# [START config.custom-data]
 [customer.metafields.app.nickname]
 type = "single_line_text_field"
 name = "The customer's preferred name"
 description = "The customer's preferred nickname for personalization"
 access.customer_account = "read_write"
 access.admin = "merchant_read"
+# [END config.custom-data]
