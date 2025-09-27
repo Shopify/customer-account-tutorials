@@ -6,14 +6,14 @@ export default function() {
 }
 
 // [START localization.build-ui]
-// [START localization.format-balance]
 function LocalizeExtension() {
-  const balance = 49.99;
+  // [START localization.format-balance]
+  const balance = 9.99;
   const formattedBalance = shopify.i18n.formatCurrency(balance);
   // [END localization.format-balance]
   
   // [START localization.format-points]
-  const points = 1250;
+  const points = 10000;
   const formattedPoints = shopify.i18n.formatNumber(points);
   // [END localization.format-points]
 
@@ -31,7 +31,9 @@ function LocalizeExtension() {
         
         {/* [START localization.translate-balance] */}
         <s-text>
-          {shopify.i18n.translate("balanceRemaining", { formattedBalance })}
+          {shopify.i18n.translate("balanceRemaining", {
+            formattedBalance
+          })}
         </s-text>
         {/* [END localization.translate-balance] */}
       </s-stack>
