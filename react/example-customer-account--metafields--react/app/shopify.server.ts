@@ -1,14 +1,15 @@
-import "@shopify/shopify-app-remix/adapters/node";
+import "@shopify/shopify-app-react-router/adapters/node";
 import {
   ApiVersion,
   AppDistribution,
   DeliveryMethod,
   shopifyApp,
-} from "@shopify/shopify-app-remix/server";
+  LATEST_API_VERSION,
+  type AdminApiContext
+} from "@shopify/shopify-app-react-router/server";
 import { PrismaSessionStorage } from "@shopify/shopify-app-session-storage-prisma";
 import { restResources } from "@shopify/shopify-api/rest/admin/2024-04";
 import prisma from "./db.server";
-import type { AdminApiContext } from "node_modules/@shopify/shopify-app-remix/dist/ts/server/clients";
 import type { ShopifyRestResources } from "@shopify/shopify-api";
 
 const shopify = shopifyApp({
