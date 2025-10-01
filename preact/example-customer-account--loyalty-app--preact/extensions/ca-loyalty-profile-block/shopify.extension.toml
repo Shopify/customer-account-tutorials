@@ -4,7 +4,7 @@ api_version = "2025-10"
 type = "ui_extension"
 name = "ca-loyalty-profile-block"
 handle = "ca-loyalty-profile-block"
-
+uid = "80e9f109-e0c9-ab13-2c5a-e065beb9d2eb669d1292"
 
 # [START config.setup-targets]
 [[extensions.targeting]]
