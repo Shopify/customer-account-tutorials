@@ -4,6 +4,7 @@ api_version = "2025-10"
 name = "ca-loyalty-order-status-block"
 handle = "ca-loyalty-order-status-block"
 type = "ui_extension"
+uid = "e0260bd4-f328-fedf-994f-bfeb7e42f14a9089f017"
 
 # [START config.setup-targets]
 [[extensions.targeting]]
