@@ -1,9 +1,36 @@
-# ...
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "e8f97fe0599a4caf0554f0971d2d714c"
+name = "app-samer-demo"
+handle = "app-samer-demo"
+application_url = "https://shopzilla-dental-yr-celebs.trycloudflare.com"
+embedded = true
+
+[build]
+include_config_on_deploy = true
+automatically_update_urls_on_dev = true
+
+[webhooks]
+api_version = "2025-07"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/scopes_update" ]
+  uri = "/webhooks/app/scopes_update"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-# [START config.setup-scopes]
 scopes = "customer_read_customers,customer_write_customers,write_customers"
-# [END config.setup-scopes]
 
-# ...
+[auth]
+redirect_urls = [
+  "https://shopzilla-dental-yr-celebs.trycloudflare.com/auth/callback",
+  "https://shopzilla-dental-yr-celebs.trycloudflare.com/auth/shopify/callback",
+  "https://shopzilla-dental-yr-celebs.trycloudflare.com/api/auth/callback"
+]
+
+[pos]
+embedded = false
